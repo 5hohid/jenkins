@@ -2,7 +2,7 @@ pipeline {     agent any
  
     stages { 
         stage('Build Docker Image') {             steps { 
-                bat 'docker build -t nehapmca/demobook:v1 .' 
+                bat 'docker build -t shahid/demobook:v1 .' 
             } 
         } 
  
@@ -14,7 +14,7 @@ pipeline {     agent any
         } 
  
         stage('Run Container') {             steps { 
-                bat 'docker run -d -p 7070:80 nehapmca/demobook:v1' 
+                bat 'docker run -d -p 8080:80 shahid/demobook:v1' 
             } 
         } 
     } 
